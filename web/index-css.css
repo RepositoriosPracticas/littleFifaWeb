@@ -1,0 +1,56 @@
+/*
+COLORES QUE PEGAN: 
+
+wine: #6b2737ff;
+persian-orange: #e08e45ff;
+vanilla: #f8f4a6ff;
+tea-green: #bdf7b7ff;
+violet-blue: #3943b7ff; 
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #bdf7b7ff;
+  margin-top: 50px;
+}
+h1 {
+  text-align: center;
+  color: #333;
+}
+header {
+  background-color: #6b2737ff;
+  padding: 10px 0;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+nav ul li a:hover {
+  background-color: #e08e45ff;
+}
+p{
+  text-align: center;
+  font-size: larger;
+}
+img {
+  width: 200px;
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+}
