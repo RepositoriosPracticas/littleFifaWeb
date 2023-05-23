@@ -23,26 +23,38 @@ h1 {
   color: #333;
 }
 header {
-  background-color: #6b2737ff;
-  padding: 10px 0;
+  background-color:#6b2737ff;
+  padding: 20px;
+  display: flex; /* Utiliza flexbox para centrar los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
 }
+
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
+
 nav ul li {
   display: inline-block;
-  margin: 0 10px;
+  margin-right: 20px;
 }
+
 nav ul li a {
-  color: #fff;
+  display: block;
+  padding: 20px 10px;
   text-decoration: none;
-  padding: 10px;
+  color: #ffffff;
+  text-align: center; /* Centra el texto dentro de los enlaces */
+}
+
+nav ul li a:hover {
+  background-color: #000000;
+  color: #fff;
 }
 nav ul li a:hover {
-  background-color: #e08e45ff;
+  background-color: #333;
+  color: #fff;
 }
 p{
   text-align: center;
