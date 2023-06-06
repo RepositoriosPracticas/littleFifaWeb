@@ -12,5 +12,6 @@
     <input type="email" id="email" name="email" required><br><br>
     <button type="submit">Suscribirse</button>
   </form>
+  <button onclick="location.href='index.php'">Volver a la página principal.</button>
 </body>
 </html>
