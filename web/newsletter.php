@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
   <title>Suscripción a la Newsletter</title>
@@ -12,5 +11,7 @@
     <input type="email" id="email" name="email" required><br><br>
     <button type="submit">Suscribirse</button>
   </form>
+  <br><br>
+<label><strong>Suscribete a nuestra newsletter para no perderte nunca el resultado de ningún partido!</strong></label>
 </body>
 </html>
