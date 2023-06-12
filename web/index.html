@@ -10,22 +10,36 @@
   <header>
     <nav>
       <ul class="menu">
-        <li><a href="index.html">Página principal</a></li>
-        <li><a href="Partidos.php">Partidos</a></li>
-        <li><a href="newsletter.php">Newsletter</a></li>
+        <li><a href="index.html" onmouseover="resaltarTexto(this)" onmouseout="restaurarTexto(this)">Página principal</a></li>
+        <li><a href="Partidos.php" onmouseover="resaltarTexto(this)" onmouseout="restaurarTexto(this)">Partidos</a></li>
+        <li><a href="newsletter.php" onmouseover="resaltarTexto(this)" onmouseout="restaurarTexto(this)">Newsletter</a></li>
       </ul>
     </nav>
   </header>
   <br>
-    <h1><u><strong>Bienvenido a Little Fifa</strong></u></h1>
-    <p>Tu web para estar al tanto y comprobar en tiempo real los resultados y clasificación de todos los equipo de futbol de las diferentes categorias de nuestra liga local.</p>
+    <h1><u><strong>Bienvenido a <strong>Little Fifa</strong></strong></u></h1>
+    <p>¡Bienvenido a nuestra plataforma en línea para mantenerte al tanto de los resultados y la clasificación en tiempo real de todos los equipos de fútbol de nuestra liga local! Aquí encontrarás todo lo que necesitas para seguir de cerca cada partido y estar al día con las últimas estadísticas.</p>
     <img src="fndinicio.jpg" alt="Logo de Little Fifa">
     <br>
-    <h1><u>¿Qué ofrecemos?</u></h1>
-      <p>- Segimiento en tiempo real de los partidos que se disputen</p>
-      <p>- Estadísticas actualizadas para conocer la clasificación en todo momento</p>
-      <p>- Gestor de equipos para entrenadores</p>
-      <p>- Posibilidad de filtrar por diferentes categorias<p>
-      <p>- Posibilidad de filtrar por diferentes jornadas</p>
-</body>
+    <h1><u>¿Qué puedes encontrar en nuestra plataforma?</u></h1>
+    <p>- Seguimiento en tiempo real de todos los partidos que se disputen, sin importar la categoría.</p>
+    <p>- Estadísticas actualizadas al instante para que conozcas la clasificación en todo momento.</p>
+    <p>- Un práctico gestor de equipos diseñado específicamente para entrenadores, facilitando la organización y el seguimiento de sus equipos.</p>
+    <p>- La posibilidad de filtrar los resultados y la clasificación por diferentes categorías, para que puedas enfocarte en los equipos que más te interesen.</p>
+    <p>- Además, ofrecemos la opción de filtrar por diferentes jornadas, lo que te permitirá acceder rápidamente a la información de partidos pasados y futuros.</p>
+    <p>¡No pierdas ni un solo momento de emoción futbolística y únete a nuestra plataforma ahora mismo! Mantente informado y disfruta al máximo de nuestra liga local.</p>
+<br><br><br>
+  </body>
 </html>
+
+<script>
+  function resaltarTexto(element) {
+    element.style.fontWeight = 'bold';
+    element.style.textDecoration = 'underline';
+  }
+
+  function restaurarTexto(element) {
+    element.style.fontWeight = 'normal';
+    element.style.textDecoration = 'none';
+  }
+</script>
