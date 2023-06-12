@@ -2,7 +2,7 @@
 
     include("conecta.php");
     // Preparar la consulta SQL para insertar el correo en la base de datos
-    $sql = "INSERT INTO lf_newsletter (correo) VALUES ('$email')";
+    $sql = "INSERT INTO lf_newsletter VALUES ('$email')";
 
     // Ejecutar la consulta
     if ($conn->query($sql) === TRUE) {

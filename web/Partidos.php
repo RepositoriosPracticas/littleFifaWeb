@@ -14,9 +14,9 @@
 
 <? 
 
-	/////////////////////////////////////////////////
-	//NOS CONECTAMOS A LA BDD Y COGEMOS LOS LIBROS//
-	///////////////////////////////////////////////
+	
+	//NOS CONECTAMOS A LA BDD Y COGEMOS LOS PARTIDOS
+	
 	include("conecta.php");
 		$sql="SELECT equipo1, equipo2, fecha, hora, categoria, liga, temporada FROM tabla_partidos LIMIT 30";
 		$resultado=$mysqli->query($sql);

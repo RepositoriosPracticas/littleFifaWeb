@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #bdf7b7ff;
+    background-color: rgb(213, 245, 209);
     padding: 20px;
     text-align: center;
   }
@@ -47,6 +47,6 @@ body {
   }
   
   button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #6e746e4b;
   }
   
