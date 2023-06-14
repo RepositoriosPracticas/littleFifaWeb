@@ -2,6 +2,8 @@
 <head>
 	<title>Resultados</title>
 	<link href="partidos.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="index-css.css">
+    <link rel="icon" type="image/png" href="favicon.png">
 	<script type="text/javascript" src="funciones.js"></script>
     <script src="conecta.php"></script>
 </head>

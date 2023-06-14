@@ -3,6 +3,7 @@
 	<title>Partidos</title>
 	<link href="partidos.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="funciones.js"></script>
+	<link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body onload="crearFila()">
 	<form action="Partidos.php" method="post">
