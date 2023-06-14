@@ -3,6 +3,7 @@
   <title>Suscripción a la Newsletter</title>
     <link href="newsletter.css" rel="stylesheet" type="text/css">
     <script src="conecta.php"></script>
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
   <h1>Suscripción a la Newsletter</h1>
