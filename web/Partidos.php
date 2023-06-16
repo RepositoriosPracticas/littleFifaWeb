@@ -2,6 +2,8 @@
 <head>
 	<title>Partidos</title>
 	<link href="partidos.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="index-css.css">
+	<meta charset="UTF-8">
 	<link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
@@ -15,6 +17,7 @@
       </ul>
     </nav>
   </header>
+  <h1>Partidos<h1>
 <table id="tabla" name="tabla">
 	<tr>
 			<td><strong>Equipo 1</strong></td>

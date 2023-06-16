@@ -4,6 +4,7 @@
 	<link href="partidos.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="index-css.css">
     <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
 	<script type="text/javascript" src="funciones.js"></script>
     <script src="conecta.php"></script>
 </head>
@@ -23,6 +24,16 @@
     <select>Seleccione la categoria</select>
     <select>Seleccione la jornada</select>
     <select>Seleccione la liga</select> -->
+    <table id="tabla" name="tabla">
+    <tr>
+			<td><strong>Equipo 1</strong></td>
+			<td><strong>Resultado </strong></td>
+			<td><strong>Resultado</strong></td>
+			<td><strong>Equipo 2</strong></td>
+			<td><strong>Liga</strong></td>
+			<td><strong>Temporada</strong></td>
+			<td><strong>Categoria</strong></td>
+		</tr>
     
 <? 
     include("conecta.php"); 
@@ -38,21 +49,20 @@
                 $temporada = $row['temporada'];
                 $categoria = $row['categoria'];
                 
-                echo "<table";
 				echo "<tr>";
 				echo "<td>". $equipo1 ."</td>";
 				echo "<td>". $resultado1 ."</td>";
+                echo "<td>". $resultado2 ."</td>";
                 echo "<td>". $equipo2 ."</td>";
-				echo "<td>". $resultado2 ."</td>";
 				echo "<td>". $liga ."</td>";
 				echo "<td>". $temporada ."</td>";
 				echo "<td>". $categoria ."</td>";
 				echo "</tr>";
-                echo "</table>";
+                echo "<br>";
 			}
-		}
-        
+		}       
 ?>
+</table>
 
 </div>
 </body>
