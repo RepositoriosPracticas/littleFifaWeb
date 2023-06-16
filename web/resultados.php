@@ -7,23 +7,51 @@
 	<script type="text/javascript" src="funciones.js"></script>
     <script src="conecta.php"></script>
 </head>
-<body onload="crearFila()">
+<body>
+<header>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html" onmouseover="resaltarTexto(this)" onmouseout="restaurarTexto(this)">Página principal</a></li>
+        <li><a href="partidos.php" onmouseover="resaltarTexto(this)" onmouseout="restaurarTexto(this)">Partidos</a></li>
+        <li><a href="resultados.php" onmouseover="resaltarTexto(this)" onmouseout="restaurarTexto(this)">Resultados</a></li>
+        <li><a href="newsletter.php" onmouseover="resaltarTexto(this)" onmouseout="restaurarTexto(this)">Newsletter</a></li>
+      </ul>
+    </nav>
+  </header>
 <h1>Resultados<h1>
-    <select>Seleccione la temporada</select>
+    <!-- <select>Seleccione la temporada</select>
     <select>Seleccione la categoria</select>
     <select>Seleccione la jornada</select>
-    <select>Seleccione la liga</select>
+    <select>Seleccione la liga</select> -->
     
 <? 
     include("conecta.php"); 
-        $sql="SELECT * FROM lf_resultados WHERE temporada="$temporada", categoria="$categoria", jornada="$jornada", liga="$liga" LIMIT 30";
-        $resultado=$mysqli->query($sql);
-        $datos=$resultado->fetch_all();
-        $num_rows=count($datos);
-    for($i=0;$i<$num_rows;$i++){
-        $pal=$datos[$i][0];
-        ?><script>llenarArrayPal("<?= $pal?>",<?= $i ?>);</script><?
-    }
+        $sql="SELECT equipo1, equipo2, resultado_equipo1, resultado_equipo2, liga, temporada, categoria FROM lf_resultados";
+        $resultado=$conn->query($sql);
+		if ($resultado->num_rows > 0) {
+			while($row = $resultado->fetch_assoc()) {
+				$equipo1 = $row['equipo1'];
+				$equipo2 = $row['equipo2'];
+				$resultado1 = $row['resultado_equipo1'];
+				$resultado2 = $row['resultado_equipo2'];
+				$liga = $row['liga'];
+                $temporada = $row['temporada'];
+                $categoria = $row['categoria'];
+                
+                echo "<table";
+				echo "<tr>";
+				echo "<td>". $equipo1 ."</td>";
+				echo "<td>". $resultado1 ."</td>";
+                echo "<td>". $equipo2 ."</td>";
+				echo "<td>". $resultado2 ."</td>";
+				echo "<td>". $liga ."</td>";
+				echo "<td>". $temporada ."</td>";
+				echo "<td>". $categoria ."</td>";
+				echo "</tr>";
+                echo "</table>";
+			}
+		}
+        
 ?>
 
 </div>
