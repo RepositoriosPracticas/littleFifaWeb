@@ -1,13 +1,19 @@
-<?php
+<?
+// Datos de conexión a la base de datos
+$servername = "mysql.piglesias.colexio-karbo.com";
+$username = "karbo_piglesias";
+$password = "Alumno*2021";
+$dbname = "karbo_piglesias";
 
-$servidor = "mysql.colexio-karbo.com"
-$usuario = "karbo_piglesias"
-$contraseña = "Alumno*2021"
-$bbdd = "karbo_piglesias"
+// Crear conexión
 
-$conn = new mysqli($servidor, $usuario, $contraseña, $bbdd)
+$conn = new mysqli($servername, $username, $password, $dbname);
+$conn->set_charset("utf8");
 
-if($conn->connect_error){
+// Verificar la conexión
+
+if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }
+
 ?>
