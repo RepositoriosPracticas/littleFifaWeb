@@ -19,6 +19,7 @@
       </ul>
     </nav>
   </header>
+  <br><br>
 <h1>Resultados<h1>
     <!-- <select>Seleccione la temporada</select>
     <select>Seleccione la categoria</select>
@@ -26,18 +27,22 @@
     <select>Seleccione la liga</select> -->
     <table id="tabla" name="tabla">
     <tr>
-			<td><strong>Equipo 1</strong></td>
-			<td><strong>Resultado </strong></td>
-			<td><strong>Resultado</strong></td>
-			<td><strong>Equipo 2</strong></td>
-			<td><strong>Liga</strong></td>
-			<td><strong>Temporada</strong></td>
-			<td><strong>Categoria</strong></td>
-		</tr>
-    
+		<td><strong>Equipo 1</strong></td>
+		<td><strong>Resultado </strong></td>
+		<td><strong>Resultado</strong></td>
+		<td><strong>Equipo 2</strong></td>
+		<td><strong>Liga</strong></td>
+		<td><strong>Temporada</strong></td>
+	</tr>
 <? 
     include("conecta.php"); 
-        $sql="SELECT equipo1, equipo2, resultado_equipo1, resultado_equipo2, liga, temporada, categoria FROM lf_resultados";
+        $sql="SELECT e1.equipo AS equipo1, e2.equipo AS equipo2, resultado_equipo1, resultado_equipo2, l.nombre as liga, t.nombre as temporada
+        FROM lf_resultados
+        JOIN lf_equipos e1 ON lf_resultados.equipo1 = e1.id
+        JOIN lf_equipos e2 ON lf_resultados.equipo2 = e2.id
+        JOIN lf_ligas l ON lf_resultados.liga = l.id
+        JOIN lf_temporada t ON lf_resultados.temporada = t.id
+        ";
         $resultado=$conn->query($sql);
 		if ($resultado->num_rows > 0) {
 			while($row = $resultado->fetch_assoc()) {
@@ -56,13 +61,13 @@
                 echo "<td>". $equipo2 ."</td>";
 				echo "<td>". $liga ."</td>";
 				echo "<td>". $temporada ."</td>";
-				echo "<td>". $categoria ."</td>";
-				echo "</tr>";
-                echo "<br>";
 			}
 		}       
 ?>
+</tr>
 </table>
+
+<br><br><br>
 
 </div>
 </body>

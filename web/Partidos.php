@@ -17,6 +17,7 @@
       </ul>
     </nav>
   </header>
+  <br><br>
   <h1>Partidos<h1>
 <table id="tabla" name="tabla">
 	<tr>
@@ -24,13 +25,20 @@
 			<td><strong>Equipo 2</strong></td>
 			<td><strong>Fecha</strong></td>
 			<td><strong>Hora</strong></td>
-			<td><strong>Categoria</strong></td>
 			<td><strong>Liga</strong></td>
 			<td><strong>Temporada</strong></td>
 		</tr>
-		<?php
+<?php
 		include("conecta.php");
-		$sql = "SELECT equipo1, equipo2, fecha, hora, categoria, liga, temporada FROM lf_partidos";
+		$sql = "SELECT  e1.equipo AS equipo1,  e2.equipo AS equipo2, fecha, hora, l.nombre as liga, t.nombre as temporada 
+		FROM lf_partidos
+		 JOIN lf_equipos e1 ON lf_partidos.equipo1 = e1.id
+		 JOIN lf_equipos e2 ON lf_partidos.equipo2 = e2.id
+		 JOIN lf_ligas l ON lf_partidos.liga = l.id
+		 JOIN lf_temporada t ON lf_partidos.temporada = t.id
+		 WHERE fecha > CURRENT_DATE
+		 ORDER BY fecha
+		";
 		$resultado = $conn->query($sql);
 		if ($resultado->num_rows > 0) {
 			while($row = $resultado->fetch_assoc()) {
@@ -47,13 +55,14 @@
 				echo "<td>". $equipo2 ."</td>";
 				echo "<td>". $fecha ."</td>";
 				echo "<td>". $hora ."</td>";
-				echo "<td>". $categoria ."</td>";
 				echo "<td>". $liga ."</td>";
 				echo "<td>". $temporada ."</td>";
-				echo "</tr>";
 			}
 		}
 		?>
+		</tr>
 		</table>
+
+		<br><br><br>
 </body>
 </html>

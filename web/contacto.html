@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contacto</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="newsletter.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+        <nav>
+          <ul class="menu">
+            <li><a href="index.html" onmouseover="resaltarTexto(this)" onmouseout="restaurarTexto(this)">Página principal</a></li>
+            <li><a href="partidos.php" onmouseover="resaltarTexto(this)" onmouseout="restaurarTexto(this)">Partidos</a></li>
+            <li><a href="resultados.php" onmouseover="resaltarTexto(this)" onmouseout="restaurarTexto(this)">Resultados</a></li>
+            <li><a href="newsletter.php" onmouseover="resaltarTexto(this)" onmouseout="restaurarTexto(this)">Newsletter</a></li>
+          </ul>
+        </nav>
+      </header>
+
+  <h1><strong><u>Contacto</strong></u></h1>
+  <form action="enviar.php" method="post">
+    <label for="asunto">Asunto:</label>
+    <input type="text" id="asunto" name="asunto" required>
+        <br><br>
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+    
+    <button type="submit">Enviar</button>
+  </form>
+ 
+  <br><br><br>
+
+</body>
+</html>
